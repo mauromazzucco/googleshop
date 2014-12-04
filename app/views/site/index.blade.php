@@ -7,4 +7,5 @@
 		{{Form::text('site')}}
 		{{Form::submit('Enviar')}}
 	{{Form::close()}}
+	{{$errors->first('site')}}
 @stop

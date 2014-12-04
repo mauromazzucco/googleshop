@@ -31,6 +31,13 @@ class SiteController extends \BaseController {
 	 */
 	public function store()
 	{
+		$validator = Validator::make(Input::all(), Site::$rules);
+
+		if($validator->fails()){
+
+			return Redirect::back()->withInput()->withErrors($validator->messages());
+
+		}
 		$site = new Site;
 		$site->nm_site = Input::get('site');
 		$site->save();
