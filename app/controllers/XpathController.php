@@ -9,7 +9,8 @@ class XpathController extends \BaseController {
 	 */
 	public function index()
 	{
-		return View::make('xpath.index');
+		$tipos = array('sku','imagem');
+		return View::make('xpath.index')->with('tipos', $tipos);
 	}
 
 
