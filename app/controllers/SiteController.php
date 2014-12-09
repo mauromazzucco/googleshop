@@ -38,10 +38,13 @@ class SiteController extends \BaseController {
 			return Redirect::back()->withInput()->withErrors($validator->messages());
 
 		}
+		
 		$site = new Site;
 		$site->nm_site = Input::get('site');
 		$site->save();
-		return View::make('site.index');
+		$id = $site -> id;
+		Session::put('id_site', $id);
+		return App::make('XpathController')->Index();
 	}
 
 
