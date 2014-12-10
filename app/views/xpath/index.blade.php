@@ -4,17 +4,21 @@
 
 
 <h1>Cadastre os Xpaths</h1>
-	<div>
-		{{Form::open(['url' => 'xpath'])}}
+
+	{{ Form::open(array('url' => url('xpath'), 'role'=>'form')) }}
+
+	<div class="form-group">	
 		{{Form::label('sku', "Sku: ")}}
 		{{Form::text('sku')}}
+	</div>
 
+	<div class="form-group">	
 		{{Form::label('imagem', "Imagem: ")}}
 		{{Form::text('imagem')}}
-
-		{{Form::submit('Enviar')}}
-	{{Form::close()}}
 	</div>
+
+		{{Form::submit('Enviar', ['class'=>'btn btn-default'])}}
+	{{Form::close()}}
 
 
 
