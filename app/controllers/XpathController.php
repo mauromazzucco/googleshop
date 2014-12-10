@@ -32,19 +32,15 @@ class XpathController extends \BaseController {
 	 */
 	public function store()
 	{
-		// $xpath = new Xpath;
 
-		// $xpath->id_site = Input::get('id_site');
-		// $xpath->tp_xpath = Input::get('id_site');
-		// $site->save();
-
-		DB::table('gs_xpath')->insert(array(
+		$data = array(
    			array('id_site' => Input::get('id_site'), 'tp_xpath' => 'sku', 'ds_xpath' => Input::get('sku')),
     		array('id_site' => Input::get('id_site'), 'tp_xpath' => 'nome', 'ds_xpath' => Input::get('nome')),
     		array('id_site' => Input::get('id_site'), 'tp_xpath' => 'preco_de', 'ds_xpath' => Input::get('preco_de')),
     		array('id_site' => Input::get('id_site'), 'tp_xpath' => 'preco_por', 'ds_xpath' => Input::get('preco_por')),
     		array('id_site' => Input::get('id_site'), 'tp_xpath' => 'imagem', 'ds_xpath' => Input::get('imagem')),
-		));;
+		);
+		Xpath::insert($data);
 
 		return "hello";
 	}
