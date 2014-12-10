@@ -13,10 +13,25 @@
 	</div>
 
 	<div class="form-group">	
+		{{Form::label('nome', "Nome: ")}}
+		{{Form::text('nome')}}
+	</div>
+
+	<div class="form-group">	
+		{{Form::label('preco_de', "Preço De: ")}}
+		{{Form::text('preco_de')}}
+	</div>
+
+	<div class="form-group">	
+		{{Form::label('preco_por', "Preço Por: ")}}
+		{{Form::text('preco_por')}}
+	</div>
+
+	<div class="form-group">	
 		{{Form::label('imagem', "Imagem: ")}}
 		{{Form::text('imagem')}}
 	</div>
-
+		{{Form::hidden('id_site' , Session::get('id_site'))}}
 		{{Form::submit('Enviar', ['class'=>'btn btn-default'])}}
 	{{Form::close()}}
 

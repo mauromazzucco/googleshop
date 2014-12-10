@@ -4,6 +4,7 @@
 class Xpath extends Eloquent  {
 
 	public $timestamps = false;
+	protected $fillable = array('id_site', 'tp_xpath', 'ds_xpath');
 
 
 	/**
