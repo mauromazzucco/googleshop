@@ -12,4 +12,5 @@
 */
 Route::get('/', 'SiteController@create');
 Route::post('/', 'SiteController@store');
+Route::post('/xpath', 'XpathController@store');
 

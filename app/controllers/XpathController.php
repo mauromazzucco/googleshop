@@ -9,7 +9,7 @@ class XpathController extends \BaseController {
 	 */
 	public function index()
 	{
-		$tipos = array('sku','imagem');
+		$tipos = array(null,'sku','imagem');
 		return View::make('xpath.index')->with('tipos', $tipos);
 	}
 
@@ -32,7 +32,8 @@ class XpathController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+
+		return "hello";
 	}
 
 
